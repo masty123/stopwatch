@@ -27,6 +27,6 @@ public class TestSumDouble implements Runnable{
 			System.out.print("sum = " + sum);
 		}
 	public String toString(){
-		return String.format("Sum of Double objects  with count=%,d\n",counter);
+		return String.format("Sum of Double objects  with count=%,d",counter);
 	}
 }

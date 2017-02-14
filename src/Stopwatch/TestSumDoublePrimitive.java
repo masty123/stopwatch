@@ -24,7 +24,7 @@ public class TestSumDoublePrimitive implements Runnable {
 			System.out.print("sum = " + sum);
 		}
 	public String toString(){
-		return String.format("Sum of double primitives with count=%,d\n", counter);
+		return String.format("Sum of double primitives with count=%,d", counter);
 	}
 
 }

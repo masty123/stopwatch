@@ -9,6 +9,7 @@ package stopwatch;
 public class TaskTimer {
 	public static void prompt(Runnable outp){
 		Stopwatch timer = new Stopwatch();
+		System.out.println(outp);
 		timer.start();
 		outp.run();
 		timer.stop();
