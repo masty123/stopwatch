@@ -1,4 +1,4 @@
-package Stopwatch;
+package stopwatch;
 
 import java.io.IOException;
 
@@ -35,30 +35,19 @@ public class SpeedTest {
 	// Don't make this too big to avoid slowing down test with paging
 	// or possible out-of-memory error.
 	static final int ARRAY_SIZE = 500000;
-	
-	
-	
 	/**
 	 * Run the tasks.
 	 */
 	public static void main(String[] args) throws IOException {
-
-		Runnable result = new AppendToString(50000);
-		TaskTimer.prompt(result);
-		// same task but with a larger string size (append more chars)
-		Runnable result1 = new AppendToString(100000);
-		TaskTimer.prompt(result1);
-		// do the same thing using StringBuilder.
-		Runnable result2 = new AppendToStringBuilder(100000);
-		TaskTimer.prompt(result2);		
-		// Use a large loop count for floating point tests in order to get accurate times
-		int counter = 1000000000; 
-		
-		Runnable result3 = new TestSumDoublePrimitive(counter,ARRAY_SIZE);
-		TaskTimer.prompt(result3);	
-		Runnable result4 = new TestSumDouble(counter,ARRAY_SIZE);
-		TaskTimer.prompt(result4);
-		Runnable result5 = new SumBigDecimal(counter,ARRAY_SIZE);
-		TaskTimer.prompt(result5);
+		int counter = 1000000000;
+		Runnable[] tasks = new Runnable[] {
+				new AppendToString(50000),
+				new AppendToString(100000),
+				new AppendToStringBuilder(100000),
+				new TestSumDoublePrimitive(counter,ARRAY_SIZE),
+				new TestSumDouble(counter,ARRAY_SIZE),
+				new SumBigDecimal(counter,ARRAY_SIZE)
+		};
+		for(Runnable task: tasks) TaskTimer.prompt(task);
 	}
 }

@@ -1,4 +1,4 @@
-package Stopwatch;
+package stopwatch;
 /**
  * Append chars to a string.
  * @author Theeruth Borisuth
@@ -7,28 +7,21 @@ package Stopwatch;
 public class AppendToString implements Runnable {
 	final char character = 'a' ;
 	int count = 0 ;
-	
-	public AppendToString(int count)
-	{
+	public AppendToString(int count){
 		this.count = count ;
-		System.out.printf("Append %d chars to String\n",count);
-
 	}
-	
-	
-
 	@Override
-	public void run() 
-	{
+	public void run(){
 		String result = "";
-		
-		for (int i = 0 ; i < count ; i++)
-		{
+		for (int i = 0 ; i < count ; i++){
 			result = result  + character ;
 		}
-			System.out.print("final string length = " + result.length());	
-		
-	}
+		System.out.print("final string length = " + result.length());		
 
+	}
+	public String toString(){
+		return String.format("Append %d chars to String",count);
+
+	}
 	}
 
