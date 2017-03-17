@@ -1,4 +1,4 @@
-Stopwatch task by Theeruth Borisuth.
+## Stopwatch task by Theeruth Borisuth.
 
 Task	Time :
 The result of this program running on my HP OMEN 16, and got
