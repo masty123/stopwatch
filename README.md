@@ -3,19 +3,19 @@
 Task	Time :
 The result of this program running on my HP OMEN 16, and got
 these results:
-Task                                                  Time
+| Type of testing | Total time |
+|:----------------|-----------:|
+|Append 50,000 chars to String|0.716821 sec|
 
-Append 50,000 chars to String                  =    0.716821 sec
+|Append 100,000 chars to String|2.137186 sec|
 
-Append 100,000 chars to String                 =    2.137186 sec
+|Append 100,000 chars to StringBuilder|0.002015 sec|
 
-Append 100,000 chars to StringBuilder          =    0.002015 sec
+|Add 1 billion double primitives using array|1.472837 sec|
 
-Add 1 billion double primitives using array    =    1.472837 sec
+|Add 1 billion double objects using array|4.552700 sec|
 
-Add 1 billion double objects using array	    =    4.552700 sec
-
-Add 1 billion BigDecimal using array           =    8.116959 sec
+|Add 1 billion BigDecimal using array|8.116959 sec|
 
 ## Explanation of Results
 
