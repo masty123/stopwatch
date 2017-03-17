@@ -3,6 +3,7 @@
 Task	Time :
 The result of this program running on my HP OMEN 16, and got
 these results:
+
 | Type of testing | Total time |
 |:----------------|-----------:|
 |Append 50,000 chars to String|0.716821 sec|
